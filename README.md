@@ -1,7 +1,7 @@
-# y
+# vue2.0-echarts3.0
 
 > 项目预览地址
-[demo](https://ningningy.github.io/vue2.0-echarts3.0/)
+[https://ningningy.github.io/vue2.0-echarts3.0/](https://ningningy.github.io/vue2.0-echarts3.0/)
 
 ## Build Setup
 
