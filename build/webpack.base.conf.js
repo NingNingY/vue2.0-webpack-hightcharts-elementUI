@@ -21,8 +21,16 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src'),
+      // 'vue$': 'vue/dist/vue.esm.js',
+      'src': path.resolve(__dirname, '../src'),
+      'store': path.resolve(__dirname, '../src/store'),
+      'utils': path.resolve(__dirname, '../src/utils'),
+      'assets': path.resolve(__dirname, '../src/assets'),
+      'filters': path.resolve(__dirname, '../src/filters'),
+      'service': path.resolve(__dirname, '../src/service'),
+      'components': path.resolve(__dirname, '../src/components'),
+      'direactives': path.resolve(__dirname, '../src/direactives')
+      // '@': resolve('src'),
     }
   },
   module: {
@@ -34,8 +42,13 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loader: 'babel-loader',
-        include: [resolve('src'), resolve('test')]
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['env']
+          }
+        }
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -52,6 +65,10 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
+      },
+      {
+        test: /\.scss$/,
+        loader: 'style-loader!css-loader!sass-loader'
       }
     ]
   }

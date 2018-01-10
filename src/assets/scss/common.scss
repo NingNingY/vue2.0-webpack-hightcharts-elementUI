@@ -1,0 +1,193 @@
+@import "variables.scss";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+*, *:hover {
+  @include transition(background-color .3s linear,
+                      color .05s linear,
+                      opacity .3s linear,
+                      filter .3s linear,
+                      visibility .3s linear,
+                      transform .3s linear);
+}
+
+*, *:focus {
+  box-shadow: none!important;
+  outline: none!important;
+}
+
+.popper-box {
+  max-width: 600px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-indent: 2rem;
+  letter-spacing: 2px;
+
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0;
+  -moz-osx-font-smoothing: grayscale;
+  padding-top: $navbar-height;
+}
+
+.table-box {
+  // min-height: 520px;
+}
+
+.ql-editor {
+  min-height: 10em;
+}
+
+label {
+  font-weight: normal;
+
+  &.checkbox {
+    // padding-left: $gauge * 1.2 !important;
+  }
+}
+
+.radio,
+.checkbox {
+  display: inline-block;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-bottom: 0px;
+}
+
+.form-horizontal {
+  .checkbox {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+ul {
+  margin-bottom: $gauge;
+}
+
+// 动画
+.fade-in-enter-active, .fade-in-leave-active {
+  transition: opacity .15s ease;
+}
+.fade-in-enter, .fade-in-leave-active {
+  opacity: 0;
+}
+
+.slide-up-enter-active, .slide-up-leave-active {
+  transition: all .15s ease;
+  opacity: .7;
+  transform: translate3d(0, 2em, 0);
+}
+.slide-up-enter, .slide-up-leave-active {
+  opacity: .3;
+  transform: translate3d(0, 2em, 0);
+}
+
+.slide-left-enter-active, .slide-left-leave-active {
+  transition: all .2s cubic-bezier(0, 1.2, 1, 0.5);
+  opacity: .5;
+  transform: translate3d(2em, 0, 0);
+}
+
+.slide-left-enter, .slide-left-leave-active {
+  opacity: .3;
+  transform: translate3d(2em, 0, 0);
+}
+
+.slide-right-enter-active, .slide-right-leave-active {
+  transition: all .4s cubic-bezier(0, 1.2, 1, 0.5);
+  opacity: .5;
+  transform: translate3d(5em, 0, 0);
+}
+.slide-right-enter, .slide-right-leave-active {
+  opacity: .3;
+  transform: translate3d(5em, 0, 0);
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: all .15s
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.fade-move {
+  transition: all .15s;
+}
+
+.text {
+
+  &-h1 { font-size: $font-size-h1 }
+  &-h2 { font-size: $font-size-h2 }
+  &-h3 { font-size: $font-size-h3 }
+  &-h4 { font-size: $font-size-h4 }
+  &-h5 { font-size: $font-size-h5 }
+  &-h6 { font-size: $font-size-h6 }
+}
+
+.scale-form-item {
+
+  .el-input-group--append {
+    width: 16rem;
+  }
+}
+
+.algorithm-editor-item-tag {
+
+  .el-select {
+    width: 9rem;
+  }
+
+  .el-tag {
+    height: 29px;
+    line-height: 27px;
+    font-size: 13px;
+    margin-right: .5rem;
+    border: 1px solid #cfd7e0;
+  }
+
+  .input-new-tag {
+    margin-top: 1rem;
+  }
+}
+
+.algorithm-dialog-box {
+
+  .el-select {
+    width: 20rem;
+  }
+
+  .el-tag {
+    height: 29px;
+    line-height: 27px;
+    font-size: 13px;
+    margin-right: .5rem;
+    border: 1px solid #cfd7e0;
+  }
+
+  .el-input {
+    width: 20rem;
+  }
+
+  .input-new-tag {
+    margin-top: 1rem;
+  }
+}
+
+// html, body {
+//   width: 100vw;
+// }
+
+@media screen and  (max-width: 1200px) {
+  html, body {
+    width: 1300px;
+    overflow : scroll;
+
+    .container {
+      width: auto;
+    }
+  }
+}
+
