@@ -12,6 +12,7 @@ import Highstock from 'highcharts/highstock'
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
 })
+//test
 
 Vue.use(VueResource)
 Vue.use(ElementUI)
