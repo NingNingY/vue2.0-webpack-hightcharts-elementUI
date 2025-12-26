@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h2><strong>详情页</strong></h2>
+		<h2><strong>详情页123</strong></h2>
 
 	</div>
 </template>
